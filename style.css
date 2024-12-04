@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2b2b2b, #1e1e1e);
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+    color: #f5ba13;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#tog {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #f5ba13;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    visibility: hidden;
+}
+
+#tog:hover {
+    background: #eaa211;
+    transform: scale(1.05);
+}
+
+ul {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.divv {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+}
+
+.box {
+    width: 75px;
+    height: 75px;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: white;
+    background: #e0e0e0;
+    border: 1px solid #aaa;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.box:nth-child(even) {
+    background: #3d3d3d;
+}
+
+.box:nth-child(odd) {
+    background: #f0f0f0;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.Wpawn {
+    color: black;
+    background: #f7d358; 
+}
+.box {
+    /* your existing styles */
+    font-size: 0; /* add this line */
+}
+.allimg {
+    width: 45px;
+    position: relative;
+    bottom: 5px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.allpawn {
+    transform: scale(0.8);
+}
+
+.authcont {
+    width: 100vw;
+    text-align: center;
+}
+
+.author {
+    float: right;
+    margin-right: 50px;
+    color: #f5ba13;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 650px) {
+    #tog {
+        margin-bottom: 70px;
+    }
+
+    .box {
+        width: 11vw;
+        height: 11vw;
+        border-radius: 5px;
+    }
+
+    .allimg {
+        width: 8vw;
+    }
+}
